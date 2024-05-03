@@ -60,14 +60,24 @@ app.post("/display", async (request, response) => {
 app.get("/history", async (request, response) => {
   let data = await collectionObj.find({}).toArray();
   let toDisplay = "";
-  data.forEach(({ cityName, countryName, temp, humidity, precipitation }) => {
-    toDisplay += `<div class='record'>
-         City: ${cityName}, Country: ${countryName} <br> 
+  data
+    .reverse()
+    .forEach(({ cityName, countryName, temp, humidity, precipitation }) => {
+      toDisplay += `<div class='record'>
+        City: ${cityName}, <br> Country: ${countryName} <br> 
         temp: ${temp}, humidity: ${humidity} <br>
         precipitation: ${precipitation} </div>`;
-  });
+    });
   variables = {
     display: toDisplay,
+  };
+  response.render("history", variables);
+});
+
+app.post("/history", async (request, response) => {
+  let data = await collectionObj.deleteMany({});
+  variables = {
+    display: "",
   };
   response.render("history", variables);
 });
