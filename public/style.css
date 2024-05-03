@@ -83,19 +83,19 @@ body {
 }
 
 #hist {
-    text-decoration: none;
-
-    width: 400px;
-    background-color: rgb(113, 151, 198);
+    /* width: 100%; */
+    background-color: rgba(113, 151, 198, 0.543);
     vertical-align: middle;
     align-items: center;
     /* display: flex; */
     justify-content: center;
     align-items: center;
-    opacity: 40%;
+    margin-top: 30px;
+}
+
+#histSearch {
+    text-decoration: none;
     color: #ffffff;
-
-
 }
 
 /* <i class="fa fa-search"></i> */

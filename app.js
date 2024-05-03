@@ -64,11 +64,12 @@ app.get("/history", async (request, response) => {
     .reverse()
     .forEach(({ cityName, countryName, temp, humidity, precipitation }) => {
       toDisplay += `<div class='record'>
-        ${cityName} <br> ${countryName} <br> 
+        ${cityName} <br> ${countryName} <br>
         <div> <i class=\"fa-solid fa-temperature-high\"></i> ${temp} °F </div>
         <div> <i class=\"fa-solid fa-droplet\"></i> ${humidity} % </div>
         <div> <i class=\"fa-solid fa-cloud-rain\"></i> ${precipitation} in </div>
-        </div>`;
+        </div>
+        <hr> `;
     });
   variables = {
     display: toDisplay,
