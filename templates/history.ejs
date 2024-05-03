@@ -10,10 +10,27 @@
 
 <body>
     <div id="displayBox">
-        <%- display %>
+        <%- display %> <br>
     </div>
+
+    <input id="submit" type="submit" value="Remove all records" onclick="ask()" />
+
 
     <a href="/">Return to homepage</a>
 </body>
 
 </html>
+
+<script>
+
+    function ask() {
+        const prompt = "Remove all records?";
+        const result = confirm(prompt);
+        if (result) {
+            console.log("ok")
+        } else {
+            console.log("canceled")
+        }
+    }
+
+</script>
