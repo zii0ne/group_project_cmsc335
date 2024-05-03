@@ -6,11 +6,10 @@
 } */
 
 html {
+    color: white;
+
     font-size: 30px;
     font-family: "Verdana", "Courier New", monospace;
-    text-align: center;
-    vertical-align: middle;
-    align-items: center;
     /* top: 30px; */
     /* margin-top: 10%; */
     height: 100%;
@@ -21,7 +20,6 @@ html {
     font-family: "Verdana", "Courier New", monospace;
     text-align: center;
     vertical-align: middle;
-    align-items: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,6 +28,7 @@ html {
 }
 
 body {
+    color: white;
     font-family: montserrat, arial, verdana;
     background: transparent;
 
@@ -37,36 +36,21 @@ body {
     background-size: cover;
 }
 
-h1 {
-    color: whitesmoke;
-    font-weight: bold;
-}
-
-#cityName {
-    color: whitesmoke;
-    font-family: montserrat;
-    color: #2c3e50;
-    font-size: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-
-    margin: 10px;
-    border-radius: 10px;
-    border: transparent;
-    opacity: 40%;
-}
-
 #displayBox {
+    color: white;
+
     border-radius: 10px;
     border-color: transparent;
     /* background-color: rgba(143, 157, 173, 0.045); */
     background-color: rgba(111, 122, 135, 0.161);
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+
 
     /* background-color: rgb(254, 254, 254); */
-    opacity: 40%;
-    width: auto;
+    opacity: 50%;
+    width: 100%;
     overflow-y: scroll;
 
     max-height: 20em;
@@ -101,15 +85,15 @@ h1 {
     margin: 10px;
     border-radius: 20em;
     border: transparent;
-    opacity: 40%;
+    opacity: 30%;
 }
 
 #return {
     /* position: absolute; */
-
-    font-size: 20px;
+    font-size: 30px;
     text-decoration: none;
-    color: rgb(251, 244, 233);
+    color: rgb(151, 145, 135);
+
     /* bottom: 0; */
 
     text-align: center;
@@ -120,6 +104,10 @@ h1 {
     align-items: center;
     margin-top: 40px;
     /* background-size: cover; */
+}
+
+#submit:hover {
+    opacity: .5;
 }
 
 #return:hover {
