@@ -12,9 +12,9 @@
     <div id="displayBox">
         <%- display %> <br>
     </div>
-
-    <input id="submit" type="submit" value="Remove all records" onclick="ask()" />
-
+    <form action="/history" method="post">
+        <input id="submit" type="submit" value="Remove all records" onclick="ask()" />
+    </form>
 
     <a href="/">Return to homepage</a>
 </body>
