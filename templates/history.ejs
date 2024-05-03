@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>Display</title>
     <link rel="stylesheet" href="historyStyle.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.0/css/all.css">
 
 </head>
 
@@ -16,21 +17,20 @@
         <input id="submit" type="submit" value="Remove all records" onclick="ask()" />
     </form>
 
-    <a href="/">Return to homepage</a>
+    <a href="/" id="return"><i class="fas fa-home"></a>
+
 </body>
 
 </html>
 
 <script>
 
-    function ask() {
+    window.onsubmit = function (event) {
         const prompt = "Remove all records?";
-        const result = confirm(prompt);
-        if (result) {
-            console.log("ok")
-        } else {
-            console.log("canceled")
-        }
-    }
+        return confirm(prompt);
+
+    };
+
+
 
 </script>

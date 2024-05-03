@@ -4,21 +4,25 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Welcome</title>
+    <title>Weather Homepage</title>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 </head>
 
 <body>
-    <h1>Welcome</h1>
-    <form action="/display" method="post">
-        <input id="name" type="text" name="name" placeholder="Enter the city name" />
+    <a href="/" id="title">Weather Now</a>
+    <form action="/display" method="post" id="form">
+        <input id="name" type="text" name="name" placeholder="Enter a city name" />
         <input id="search" type="submit" value="Search" />
         <input id="reset" type="reset" />
 
     </form>
-    <a href="history" id="hist">Go To Your Search History</a>
 
+    <div id="hist">
+        <a href="history" id="hist">Search History</a>
+    </div>
 
 </body>
 

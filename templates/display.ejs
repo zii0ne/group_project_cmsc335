@@ -5,19 +5,34 @@
     <meta charset="utf-8" />
     <title>Display</title>
     <link rel="stylesheet" href="displayStyle.css" type="text/css">
+    <!-- <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"> -->
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.0/css/all.css">
+
+
 
 </head>
 
 <body>
-    <div>
+    <div id="box">
         <span id="cityName"><%- cityName %> <br>
-                <span id="cityName">Country: <%- countryName %> <br><br>
-                        <span id="temp">Temperature: <%- temp %> <br>
-                                <span id="humidity">Humidity: <%- humidity %> <br>
-                                        <span id="precipitation">Precipitation: <%- precipitation %> <br><br>
-                                                <br>
-                                                <a href="/">Return to homepage</a>
+                <span id="countryName"><%- countryName %> <br>
+                        <hr id="line">
+                        <i class="fas fa-temperature-high"></i><span id="temp"> <%- temp %><sup class="sup">°F</sup><br>
+
+                                <div id="innerBox">
+                                    <i class="fas fa-droplet"></i><span id=" humidity"> <%- humidity %><sup
+                                                class="sup">%</sup>
+                                            <i class="fa-solid fa-cloud-rain"></i> <span id="precipitation"><%-
+                                                    precipitation%><sup class="sup">in</sup>
+
+                                </div>
     </div>
+    <a href="/" id="return"><i class="fas fa-home"></a>
+
 </body>
 
 </html>

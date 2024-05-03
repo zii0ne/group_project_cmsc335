@@ -61,7 +61,10 @@ h1 {
 #displayBox {
     border-radius: 10px;
     border-color: transparent;
-    background-color: rgb(254, 254, 254);
+    /* background-color: rgba(143, 157, 173, 0.045); */
+    background-color: rgba(111, 122, 135, 0.161);
+
+    /* background-color: rgb(254, 254, 254); */
     opacity: 40%;
     width: auto;
     overflow-y: scroll;
@@ -83,4 +86,42 @@ h1 {
     border-radius: 10px;
     border: transparent;
     opacity: 40%;
+}
+
+#submit {
+    background-color: rgb(189, 213, 234);
+    font-family: montserrat;
+
+    font-size: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    margin: 10px;
+    border-radius: 20em;
+    border: transparent;
+    opacity: 40%;
+}
+
+#return {
+    /* position: absolute; */
+
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(251, 244, 233);
+    /* bottom: 0; */
+
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    /* background-size: cover; */
+}
+
+#return:hover {
+    color: rgb(255, 255, 255)
 }

@@ -7,7 +7,6 @@
 } */
 
 html {
-    font-size: 30px;
     font-family: "Verdana", "Courier New", monospace;
     text-align: center;
     vertical-align: middle;
@@ -18,7 +17,6 @@ html {
     /* Ensure the body takes up the full viewport height */
     margin: 0;
     /* Remove default margins */
-    font-size: 20px;
     font-family: "Verdana", "Courier New", monospace;
     text-align: center;
     vertical-align: middle;
@@ -40,17 +38,29 @@ body {
 
 }
 
-h1 {
+
+
+#title {
     color: whitesmoke;
     font-weight: bold;
+    font-size: 50px;
+    text-decoration: none;
+    margin-bottom: 100px;
 
+}
+
+#form {
+    margin-top: 100px;
 }
 
 #name,
 #search,
-#reset {
+#reset,
+#hist {
     font-family: montserrat;
-    color: #2C3E50;
+    /* color: #23313f; */
+    color: #1a2f43;
+
     font-size: 15px;
     padding-left: 20px;
     padding-right: 20px;
@@ -58,7 +68,7 @@ h1 {
     padding-bottom: 15px;
 
     margin: 10px;
-    border-radius: 10px;
+    border-radius: 20em;
     border: transparent;
     opacity: 40%;
 }
@@ -73,5 +83,34 @@ h1 {
 }
 
 #hist {
-    color: antiquewhite
+    text-decoration: none;
+
+    width: 400px;
+    background-color: rgb(113, 151, 198);
+    vertical-align: middle;
+    align-items: center;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    opacity: 40%;
+    color: #ffffff;
+
+
+}
+
+/* <i class="fa fa-search"></i> */
+input:focus {
+    outline: none;
+}
+
+#reset:hover,
+#search:hover,
+#hist:hover {
+    opacity: .5;
+}
+
+#reset:active,
+#search:active,
+#hist:active {
+    opacity: .5;
 }
