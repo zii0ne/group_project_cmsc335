@@ -11,3 +11,4 @@ const db = process.env.MONGO_DB_NAME;
 const collection = process.env.MONGO_COLLECTION;
 const databaseAndCollection = { db: db, collection: collection };
 const { MongoClient, ServerApiVersion } = require("mongodb");
+app.use(express.static(__dirname + "/public"));
