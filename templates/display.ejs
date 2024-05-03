@@ -18,20 +18,22 @@
 
 <body>
     <div id="box">
-        <span id="cityName"><%- cityName %> <br>
-                <span id="countryName"><%- countryName %> <br>
-                        <hr id="line">
-                        <i class="fas fa-temperature-high"></i><span id="temp"> <%- temp %><sup class="sup">°F</sup><br>
+        <div id="cityName"><%- cityName %> <br>
+                <div id="countryName"><%- countryName %>
+                        <div><i class="fas fa-temperature-high"></i><span id="temp"> <%- temp %><sup
+                                        class="sup">°F</sup><br></div>
 
-                                <div id="innerBox">
-                                    <i class="fas fa-droplet"></i><span id=" humidity"> <%- humidity %><sup
-                                                class="sup">%</sup>
-                                            <i class="fa-solid fa-cloud-rain"></i> <span id="precipitation"><%-
-                                                    precipitation%><sup class="sup">in</sup>
+                        <div id="innerBox">
+                            <div><i class="fas fa-droplet"></i><span id=" humidity"> <%- humidity %><sup
+                                            class="sup">%</sup></div>
+                            <div> <i class="fa-solid fa-cloud-rain"></i> <span id="precipitation"><%-
+                                        precipitation%><sup class="sup">in</sup></div>
+                        </div>
 
-                                </div>
+                </div>
+        </div>
     </div>
-    <a href="/" id="return" class="fas fa-home"></a>
+    <a href="/" id="return"><i class="fas fa-home"></a>
 
 </body>
 
