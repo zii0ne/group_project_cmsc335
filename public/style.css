@@ -1,0 +1,11 @@
+html {
+    font-family: "Verdana", "Courier New", monospace;
+}
+
+h1 {
+    color: green
+}
+
+.search {
+    background-color: red;
+}
