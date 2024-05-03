@@ -37,23 +37,46 @@ app.post("/display", async (request, response) => {
   let data;
   try {
     data = await axios
-      .get(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`)
+      .get(
+        `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`
+      )
       .then((response) => response.data);
   } catch (error) {
     console.log(error);
   }
   variables = {
     cityName: data.location.name,
+    countryName: data.location.country,
     temp: data.current.temp_f,
     humidity: data.current.humidity,
     precipitation: data.current.precip_in,
   };
-
+  let dataToInsert = { ...variables };
+  dataToInsert["last_updated"] = data.current.last_updated;
+  collectionObj.insertOne(dataToInsert);
   response.render("display", variables);
 });
 
-app.get("/history", (request, response) => {
-  response.render("history");
+app.get("/history", async (request, response) => {
+  let data = await collectionObj.find({}).toArray();
+  let toDisplay = "";
+  data.forEach(({ cityName, countryName, temp, humidity, precipitation }) => {
+    toDisplay += `<div class='record'>
+         City: ${cityName}, Country: ${countryName} <br> 
+        temp: ${temp}, humidity: ${humidity} <br>
+        precipitation: ${precipitation} </div>`;
+  });
+  variables = {
+    display: toDisplay,
+  };
+  response.render("history", variables);
 });
 
-app.listen(port);
+async function main() {
+  await client.connect();
+  collectionObj = await client
+    .db(databaseAndCollection.db)
+    .collection(databaseAndCollection.collection);
+  const server = app.listen(port);
+}
+main();
