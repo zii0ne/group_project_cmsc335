@@ -4,17 +4,19 @@
 <head>
     <meta charset="utf-8" />
     <title>Display</title>
+    <link rel="stylesheet" href="displayStyle.css" type="text/css">
+
 </head>
 
 <body>
     <div>
-        <%- cityName %> <br>
-            <%- countryName %> <br>
-                <%- temp %> <br>
-                    <%- humidity %> <br>
-                        <%- precipitation %> <br>
-
-                            <a href="/">Return to homepage</a>
+        <span id="cityName"><%- cityName %> <br>
+                <span id="cityName">Country: <%- countryName %> <br><br>
+                        <span id="temp">Temperature: <%- temp %> <br>
+                                <span id="humidity">Humidity: <%- humidity %> <br>
+                                        <span id="precipitation">Precipitation: <%- precipitation %> <br><br>
+                                                <br>
+                                                <a href="/">Return to homepage</a>
     </div>
 </body>
 

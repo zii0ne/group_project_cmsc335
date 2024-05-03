@@ -1,22 +1,77 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/* * {
+    align-items: center;
+    vertical-align: middle;
+
+} */
+
 html {
-    font-size: 20px;
+    font-size: 30px;
     font-family: "Verdana", "Courier New", monospace;
     text-align: center;
     vertical-align: middle;
     align-items: center;
     /* top: 30px; */
-    margin-top: 10%;
+    /* margin-top: 10%; */
+    height: 100%;
+    /* Ensure the body takes up the full viewport height */
+    margin: 0;
+    /* Remove default margins */
+    font-size: 20px;
+    font-family: "Verdana", "Courier New", monospace;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    background-size: cover;
+
 }
 
 body {
-    background-image: url("background.jpg");
+    font-family: montserrat, arial, verdana;
+    background: transparent;
+
+    background-image: url("background5.jpg");
+    background-size: cover;
 
 }
 
 h1 {
-    color: whitesmoke
+    color: whitesmoke;
+    font-weight: bold;
+
 }
 
-.search {
-    background-color: red;
+#name,
+#search,
+#reset {
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    margin: 10px;
+    border-radius: 10px;
+    border: transparent;
+    opacity: 40%;
+}
+
+#name {
+    width: 250px;
+}
+
+#search,
+#reset {
+    background-color: rgb(189, 213, 234);
+}
+
+#hist {
+    color: antiquewhite
 }
