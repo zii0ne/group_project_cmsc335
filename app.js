@@ -65,7 +65,7 @@ app.get("/history", async (request, response) => {
     .forEach(({ cityName, countryName, temp, humidity, precipitation }) => {
       toDisplay += `<div class='record'>
         City: ${cityName}, <br> Country: ${countryName} <br> 
-        temp: ${temp}, humidity: ${humidity} <br>
+        temp: ${temp} <br> humidity: ${humidity} <br>
         precipitation: ${precipitation} </div>`;
     });
   variables = {
