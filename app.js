@@ -65,9 +65,10 @@ app.get("/history", async (request, response) => {
     .forEach(({ cityName, countryName, temp, humidity, precipitation }) => {
       toDisplay += `<div class='record'>
         ${cityName} <br> ${countryName} <br> 
-        <i class=\"fas fa-temperature-high\"> ${temp} °F <br> 
-        <i class=\"fas fa-droplet\"> ${humidity} % <br>
-        <i class=\"fa-solid fa-cloud-rain\"> ${precipitation} in </div>`;
+        <div> <i class=\"fa-solid fa-temperature-high\"></i> ${temp} °F </div>
+        <div> <i class=\"fa-solid fa-droplet\"></i> ${humidity} % </div>
+        <div> <i class=\"fa-solid fa-cloud-rain\"></i> ${precipitation} in </div>
+        </div>`;
     });
   variables = {
     display: toDisplay,
