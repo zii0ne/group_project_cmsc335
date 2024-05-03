@@ -33,10 +33,11 @@ app.get("/", (request, response) => {
 
 app.post("/display", async (request, response) => {
   let city = request.body.name;
+  // console.log(city);
   let data;
   try {
     data = await axios
-      .get(`http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`)
+      .get(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`)
       .then((response) => response.data);
   } catch (error) {
     console.log(error);

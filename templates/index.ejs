@@ -20,3 +20,16 @@
 </body>
 
 </html>
+
+<script>
+    window.onsubmit = function (event) {
+        var form = event.target;
+        var cityName = form.elements['name'].value;
+        if (!cityName.trim()) {
+            alert('Please enter a city name.');
+            return false;
+        }
+        return true;
+    };
+
+</script>
