@@ -7,5 +7,4 @@ remove the search records. (p.s. Firefox runs a lot faster for some reason) \
 YouTube Video Link: https://www.youtube.com/watch?v=i97ewIpHpRU \
 APIs: weatherAPI (https://www.weatherapi.com/) \
 Contact Email: kwu588@terpmail.umd.edu, jiwonp02@terpmail.umd.edu \
-Hosted Website: https://group-project-cmsc335.onrender.com/ \
-
+Hosted Website: https://group-project-cmsc335.onrender.com/
